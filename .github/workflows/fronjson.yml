@@ -9,4 +9,4 @@ jobs:
     steps:
       - continue-on-error: ${{ fromJSON(env.continue) }}
         timeout-minutes: ${{ fromJSON(env.time) }}
-        run: echo ...
+        run: echo "$continue-on-error" 
