@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - continue-on-error: ${{ fromJSON(env.continue) }}
-      - timeout-minutes: ${{ fromJSON(env.time) }}
-      - run: echo " Print a single environment1 variable - ${{ env.continue }} "
-      - run: echo " Print a single environment2 variable - ${{ env.time }} "
+        timeout-minutes: ${{ fromJSON(env.time) }}
+        run: echo " Print a single environment1 variable - ${{ env.continue }} "
+        run: echo " Print a single environment2 variable - ${{ env.time }} "
