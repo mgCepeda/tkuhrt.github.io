@@ -7,7 +7,7 @@ jobs:
     steps:
       - run: echo "Deploying to production server on branch $GITHUB_REF"
    
-   print_context:
+  print_context:
     runs-on: ubuntu-latest
     steps:
       - env:
