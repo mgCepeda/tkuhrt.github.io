@@ -1,9 +1,9 @@
-name: run_manual
-on: 
+name: manual
+on:
   workflow_dispatch:
     inputs:
       logLevel:
-        description: 'Log level'     
+        description: 'Log level'
         required: true
         default: 'warning' 
         type: choice
@@ -21,14 +21,8 @@ on:
         required: true 
 
 jobs:
-  log-the-inputs:
+  print-tag:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "Log level: $LEVEL"
-          echo "Tags: $TAGS"
-          echo "Environment: $ENVIRONMENT"
-        env:
-          LEVEL: ${{ github.event.inputs.logLevel }}
-          TAGS: ${{ github.event.inputs.tags }}
-          ENVIRONMENT: ${{ github.event.inputs.environment }}
+      - name: Print the input tag to STDOUT
+        run: echo  The tag is ${{ github.event.inputs.tag }} 
