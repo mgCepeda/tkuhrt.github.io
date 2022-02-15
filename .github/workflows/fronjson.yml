@@ -9,5 +9,4 @@ jobs:
     steps:
       - continue-on-error: ${{ fromJSON(env.continue) }}
         timeout-minutes: ${{ fromJSON(env.time) }}
-        run: echo " Print a single environment1 variable - ${{ env.continue }} "
-        run: echo " Print a single environment2 variable - ${{ env.time }} "
+        run: echo " Print a single environment variable - ${{ env.continue }} - ${{ env.time }}"
