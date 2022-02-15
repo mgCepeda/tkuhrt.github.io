@@ -1,6 +1,9 @@
 name: Test_tag
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - master
   create:
     tags:
       - v*
