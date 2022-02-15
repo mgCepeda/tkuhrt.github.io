@@ -4,8 +4,7 @@ on:
   create:
     tags:
       - v*
-  push:
-	  
+  
 jobs:
   print-tag:
     runs-on: ubuntu-latest
