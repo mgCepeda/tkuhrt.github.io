@@ -1,0 +1,16 @@
+name: test_tag
+on:
+  workflow_dispatch:
+  create:
+    tags:
+      - v*
+  push:
+    branches:
+      - mster
+	  
+jobs:
+  print-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print the input tag to STDOUT
+        run: echo  "finish workflow"
