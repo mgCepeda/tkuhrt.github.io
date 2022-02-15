@@ -1,5 +1,8 @@
 name: manual
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
     inputs:
       logLevel:
@@ -23,6 +26,7 @@ on:
 jobs:
   print-tag:
     runs-on: ubuntu-latest
+
     steps:
       - name: Print the input tag to STDOUT
         run: echo  The tag is ${{ github.event.inputs.tag }} 
