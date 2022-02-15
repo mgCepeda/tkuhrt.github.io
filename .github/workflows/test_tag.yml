@@ -1,4 +1,4 @@
-name: test_tag
+name: Test_tag
 on:
   workflow_dispatch:
   create:
@@ -6,7 +6,7 @@ on:
       - v*
   push:
     branches:
-      - mster
+      - master
 	  
 jobs:
   print-tag:
